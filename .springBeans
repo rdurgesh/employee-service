@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.employee.app.EmployeeServiceApplication</config>
+		<config>java:com.paytm.ems.EmployeeManagement</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

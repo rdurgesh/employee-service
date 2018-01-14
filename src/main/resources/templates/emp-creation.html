@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee | Management | Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css" />
+<link rel="stylesheet" th:href="@{/css/styles.css}" href="../../css/styles.css"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">PayTm</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#employees.html">Employees</a></li>
+					<li><a href="#addEmployee.html">Add Employee</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="starter-template">
+			<h1>Welcome To Employee Management System</h1>
+			<h1 th:text="#{app.create-employee}">Create</h1>
+
+			<form action="#" th:action="@{/app/create-employee}" th:object="${employee}" method="POST">
+				<table>
+					<tr>
+						<td th:text="#{employee.employeeId}"></td>
+						<td><input type="text" th:field="*{employeeId}" /> <label
+							th:if="${#fields.hasErrors('employeeId')}"
+							th:text="#{error.employee.employeeId}" th:class="'error'">Id
+								Error</label></td>
+					</tr>
+					<tr>
+						<td th:text="#{employee.firstName}"></td>
+						<td><input type="text" th:field="*{firstName}" /> <label
+							th:if="${#fields.hasErrors('firstName')}"
+							th:text="#{error.employee.firstName}" th:class="'error'">Name
+								Error</label></td>
+					</tr>
+					<tr>
+						<td th:text="#{employee.lastName}"></td>
+						<td><input type="text" th:field="*{lastName}" /> <label
+							th:if="${#fields.hasErrors('lastName')}"
+							th:text="#{error.employee.lastName}" th:class="'error'">Name
+								Error</label></td>
+					</tr>
+					<tr>
+						<td th:text="#{employee.gender}"></td>
+						<td><input type="radio" th:field="*{gender}" value="Male" /><label
+							th:text="#{employee.gender.male}">M</label> <input type="radio"
+							th:field="*{gender}" value="Female" /><label
+							th:text="#{employee.gender.female}">F</label> <label
+							th:if="${#fields.hasErrors('gender')}"
+							th:text="#{error.employee.gender}" th:class="'error'">Gender
+								Error</label></td>
+					</tr>
+					<tr>
+						<td th:text="#{employee.married}+ '?'"></td>
+						<td><input type="checkbox" th:field="*{married}" /></td>
+					</tr>
+					<tr>
+						<td th:text="#{employee.profile}"></td>
+						<td><select th:field="*{profile}">
+								<option th:each="profile : ${allProfiles}" th:value="${profile}"
+									th:text="${profile}">Profile</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit"
+							th:value="#{employee.form.submit}" /> <input type="reset"
+							th:value="#{employee.form.reset}" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+	<!-- /.container -->
+	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+      <title th:text="#{app.title}"> Title </title>
+      <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+   <h1 th:text="#{app.employee-details}">Details</h1>
+    <table>
+        <tr>
+           <th th:text="#{employee.employeeId}"></th>
+           <th th:text="#{employee.firstName}"></th>
+           <th th:text="#{employee.lastName}"></th>
+           <th th:text="#{employee.gender}"></th>
+           <th th:text="#{employee.married}+ '?'"></th>
+           <th th:text="#{employee.profile}"></th>
+        </tr>
+        <tr th:each="employee : ${employees}">
+	      <td th:text="${employee.employeeId}">Id</td>
+		  <td th:text="${employee.firstName}">First Name</td>
+		  <td th:text="${employee.lastName}">Last Name</td>
+		  <td th:text="${employee.gender}">Gender</td>
+		  <td th:text="${employee.married}">Married</td>
+		  <td th:text="${employee.profile}">Profile</td>
+	    </tr>	
+	</table>
+	<a href="#" th:href="@{/app/create-employee}" th:text="#{employee.add-more-employee}">Add Employee</a>
+</body>
+</html> 

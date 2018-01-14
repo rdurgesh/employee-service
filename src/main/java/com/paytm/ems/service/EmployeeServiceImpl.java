@@ -1,11 +1,11 @@
-package com.employee.app.service;
+package com.paytm.ems.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.employee.app.domain.Employee;
-import com.employee.app.repository.EmpRepository;
+import com.paytm.ems.domain.Employee;
+import com.paytm.ems.repository.EmpRepository;
 
 import lombok.AllArgsConstructor;
 

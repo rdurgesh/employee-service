@@ -1,8 +1,8 @@
-package com.employee.app.service;
+package com.paytm.ems.service;
 
 import java.util.List;
 
-import com.employee.app.domain.Employee;
+import com.paytm.ems.domain.Employee;
 
 public interface EmployeeService {
 
@@ -10,9 +10,9 @@ public interface EmployeeService {
 
 	public Employee updateEmployee(Employee employee);
 
-	public void deleteEmployee(Long id);
+	public void deleteEmployee(Long employeeId);
 
-	public Employee getEmployee(Long id);
+	public Employee getEmployee(Long employeeId);
 
 	public List<Employee> findAllEmployee();
 }

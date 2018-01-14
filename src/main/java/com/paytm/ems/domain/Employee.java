@@ -1,4 +1,4 @@
-package com.employee.app.domain;
+package com.paytm.ems.domain;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -34,4 +34,19 @@ public class Employee implements Serializable {
 
 	@Column(name = "AGE")
 	private Long age;
+	
+	@Column(name = "GENDER")
+	private String gender;
+	
+	@Column(name = "MARRIED")
+	private Boolean married;
+	
+	@Column(name = "PROFILE")
+	private String profile;
+
+	@Column(name = "SALARY")
+	private Long salary;
+
+	@Column(name = "ADDRESS")
+	private String address;
 }

@@ -1,12 +1,12 @@
-package com.employee.app;
+package com.paytm.ems;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmployeeServiceApplication {
+public class EmployeeManagement {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeServiceApplication.class, args);
+		SpringApplication.run(EmployeeManagement.class, args);
 	}
 }

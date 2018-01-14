@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Implementation-Title: employee-service
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Durgesh RAI
-Implementation-Vendor-Id: com.employee.app
+Implementation-Vendor-Id: com.paytm.ems
 Build-Jdk: 1.8.0_72
 Implementation-URL: http://projects.spring.io/spring-boot/employee-ser
  vice/
